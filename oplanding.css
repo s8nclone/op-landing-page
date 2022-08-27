@@ -29,7 +29,7 @@ header {
     display:flex;
     background-color: rgb(51, 54, 54);
     justify-content:space-around;
-    padding:5px;
+    /* padding:5px; */
     height:fit-content;
     width:100%;
     flex-wrap:wrap;
@@ -39,7 +39,7 @@ header {
 
 .top-bar{
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items:center;
     height:fit-content;
 }
@@ -53,7 +53,6 @@ header {
     font-size:18px;
     text-align:center;
     text-transform: uppercase;
-    padding:5px;
     margin: 0 auto;
     font-family: "lobster";
     
@@ -61,7 +60,9 @@ header {
 
 .head-blinders h1 {
     text-shadow: 2px 2px goldenrod;
+    text-align:center;
 }
+
 .head-blinders p {
     text-decoration: 2px solid underline goldenrod;
     text-transform:capitalize;
@@ -84,12 +85,13 @@ header {
 .menu > li {
     display:flex;
     justify-content:space-around;
-    padding:5px;
+    padding-top:10px;
 }
 
 .menu a {
     text-decoration: none;
     color:peru;
+    font-size:14px;
 }
 
 .menu :last-of-type {
@@ -135,7 +137,7 @@ header {
 
 .hero-txt p {
     font-family: "lobster";
-    font-size:22px;
+    font-size:18px;
     text-transform:capitalize;
     font-weight:bold;
 }
@@ -145,6 +147,7 @@ header {
 }
 
 .join-btn {
+    font-family: inherit;
     width:60px;
     margin:5px;
     height:30px;
@@ -157,7 +160,7 @@ header {
     color:rgb(10, 56, 10);
 }
 
-article h1{
+section h1{
     text-align: center;
     text-transform: uppercase;
     text-decoration: 2px underline;
@@ -198,6 +201,21 @@ article h1{
     margin:10px;
 }
 
+.quote-boxes {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.quote-me {
+    margin:5px;
+    height:10em;
+    width:10em;
+    overflow:auto;
+} 
+
 blockquote:before {
     content: open-quote;
 }
@@ -216,10 +234,15 @@ blockquote:after {
     top: .2em;
 }
 
+span {
+    color:#000;
+}
+
+
 .contact {
     background-color: plum;
     color: black;
-    font-size:25px;
+    font-size:20px;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -227,6 +250,7 @@ blockquote:after {
     height:100px;
     width:100%;
     font-family: "dancing-script";
+    font-weight:700;
 }
 
 footer {
@@ -237,11 +261,22 @@ footer {
     text-align:center;
 }
 
-@media screen and (min-width:376px) and (max-width:768px) {
+footer a {
+    color:red;
+}
+
+
+        /* medium screen/tablets */
+@media screen and (min-width:426px) and (max-width:768px) {
     body {
         background-color: bisque;
     }
     
+    header {
+        width:100%;
+        margin:0;
+        padding:0;
+    }
     .head-blinders {
         font-size:30px;
     }
@@ -261,27 +296,36 @@ footer {
     }
 
     .hero-txt p {
-        font-size:30px;
+        font-size:21px;
         font-family: 'satisfy';
     }
 
     .family {
+        width:100%;
         height:600px;
-        width:800px;
         display:flex;
-        justify-content:center;
-        align-items:stretch;
+        overflow:auto;
+        margin:0 auto;
         flex-wrap:wrap;
-    
+        justify-content:center;
     }
 
     .fam-img img {
-        height:200px;
-        width:200px;
+        height:150px;
+        width:150px;
         border-radius:50%;
+        margin:5px;
     }
+
+    .fam-info {
+        display:flex;
+        padding:5px;
+    }
+
 }
 
+
+        /* large screen */
 @media screen and (min-width:769px) and (max-width:1440px) {
     body {
         background-color: bisque;
@@ -297,9 +341,12 @@ footer {
 
     header {
         background-color: rgba(22, 68, 22, 0.856);
+        display:block;
+
     }
     
     .top-bar {
+        float:left;
         width:60%;
         display:flex;
         justify-content:center;
@@ -310,18 +357,17 @@ footer {
         align-items:flex-end;
         justify-content:flex-start;
         width:100%;
-        text-align:left;
         margin-left:10px;
-        
+        text-align:center;
     }
 
     .head-blinders h1 {
         color:peru;
         text-align:left;
-        font-size:40px;
-        letter-spacing: 5px;
+        font-size:25px;
         text-shadow:2px 2px #000;
         transform:skew(20deg, -5deg);
+        align-self:center;
         
     }
 
@@ -330,6 +376,7 @@ footer {
         color:#fff;
         text-decoration:none;
         align-items:baseline;
+        align-items:flex-start;
     }
 
     .logo img {
@@ -337,10 +384,13 @@ footer {
         height:40px;
     }
     .nav-bar {
+        float:right;
         display:flex;
         justify-content:flex-end;
         align-items:center;
-        width:30%;
+        width:40%;
+        margin-right:5px;
+        
     }
 
     .menu a {
@@ -350,8 +400,7 @@ footer {
     .intro-hero {
         background-color: gray;
         margin-top:20px;
-        border-radius:20px;
-        color:;
+        border-radius:40px;
         width:70%;
         height:200px;
         display:flex;
@@ -375,4 +424,37 @@ footer {
         font-size:30px;
     
     }
+
+    .family {
+        border:2px solid green;
+        width:90%;
+        margin:0 auto;
+        border-radius:20%;
+        background-color: rgba(41, 0, 0, 0.849);
+        display:flex;
+        align-items:center;
+        flex-wrap:wrap;
+        justify-content: center;
+
+    }
+
+    .family p {
+        color:goldenrod;
+        text-decoration: overline;
+    }
+
+    .fam-img img {
+        border-radius:50%;
+        width:200px;
+        height:200px;
+    }
+
+    .contact {
+        background-color: gray;
+    }
+
+    footer {
+        background-color: rgba(22, 68, 22, 0.856) ;
+    }
+
 }

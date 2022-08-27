@@ -29,10 +29,10 @@
         <nav class="nav-bar">
             <div class="nav-list">
                 <ul class="menu">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Lifestyle</a></li>
-                    <li><a href="#">Family</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#quotes">Quotes</a></li>
+                    <li><a href="#family">Family</a></li>
+                    <li><a href="#contact">contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -40,7 +40,7 @@
 </header>
 <main>
     <section>
-        <div class="hero-container">
+        <div id="about" class="hero-container">
             <div class="intro-hero">
                 <div class="hero-img">
                     <img src="images\peakyblinders1.png" alt="peaky blinder lead">
@@ -49,13 +49,13 @@
                     <p>welcome to the <strong>Peaky blinders</strong>! Our word is the law and 
                     that is by the order of the peaky fooking blinders.</p>
 
-                    <button class="join-btn">Join us!</button>
+                    <input class="join-btn" type="button" value="Join us!">
                 </div>
             </div>
         </div>
     </section>
-    <article>
-        <div>
+    <section>
+        <div id="family">
             <h1><strong>The Family</strong></h1>
         </div>
         <div class="family">
@@ -105,24 +105,56 @@
                 <p><em>Stray/Activist</em></p>
             </div>
         </div>
-    </article>
+    </section>
 
-    <div class="quotes">
-        <blockquote>
-            I don't pay for suits. My suits are on the house or the house burns down.
-        </blockquote>
-         
-         <cite>Tommy shelby</cite>
-        
+    <div id="quotes" class="quotes">
+        <div class="quote-boxes">
+            <div class="quote-me tommy1">
+                <blockquote>
+                    I don't pay for suits. My suits are on the house or the house burns down.
+                </blockquote>
+                <span><cite>Tommy shelby</cite></span>
+            </div>
+            
+            <div class="quote-me tommy2">
+                <blockquote>
+                    You know, gentlemen, there is hell, and there is another place below hell.
+                </blockquote>
+                <span><cite>Tommy shelby</cite></span>
+            </div>
+            
+            
+            <div class="quote-me tommy3">
+                <blockquote>
+                    You can change what you do, but you cannot change what you want
+                </blockquote>
+                <span><cite>Tommy shelby</cite></span>
+            </div>
+            
+            <div class="quote-me polly">
+                <blockquote>
+                    I Will Wear High Heels So You Can Hear My Approach On The Cobblestones And Have Time To Repent.
+                </blockquote>
+                <span><cite>Aunt Polly</cite></span>
+            </div>
+            
+            <div class="quote-me arthur">
+                <blockquote>
+                    I'm A Good Man. But My Hands... These Hands Belong To The Devil.
+                </blockquote>
+                <span><cite>Arthur shelby</cite></span>
+            </div>
+
+        </div>
     </div>
 
 <hr/>
 
-        <div class="contact">
-            <h4>want to be unstoppable?</h4>
+        <div id="contact" class="contact">
+            <p>want to be unstoppable?</p>
             <p>Join us now to become a peaky blinder</p>
 
-            <button class="join-btn">Join</button>
+            <input class="join-btn" type="button" value=Join>
         </div>
 
 </main>
